@@ -1,5 +1,6 @@
 # Sales-Data-Analysis-project
 Project Overview
+
 This project analyzes sales data from a fictional Super Store to uncover insights that can drive better business decisions. Using Python’s data analysis and visualization libraries, the project explores sales trends, profit patterns, and product performance across regions and categories.
 
 The goal is to help decision-makers identify high-performing areas, detect losses, and plan strategic actions for growth.
