@@ -6,6 +6,7 @@ This project analyzes sales data from a fictional Super Store to uncover insight
 The goal is to help decision-makers identify high-performing areas, detect losses, and plan strategic actions for growth.
 
 📊 Key Features
+
 Data Cleaning & Preprocessing – Handled missing values, removed duplicates, and formatted data for analysis.
 
 Exploratory Data Analysis (EDA) – Explored sales and profit trends using Pandas and Matplotlib/Seaborn.
@@ -19,6 +20,7 @@ Profitability Study – Analyzed discount impact on profit margins.
 Data Visualization – Created clear, interactive visualizations for better decision-making.
 
 🛠️ Tech Stack
+
 Language: Python
 
 Libraries: Pandas, NumPy, Matplotlib, Seaborn, Plotly
@@ -28,6 +30,7 @@ Dataset: Sample Superstore dataset (CSV format)
 IDE/Tools: Jupyter Notebook / VS Code
 
 📈 Key Insights Example
+
 High discounts reduce profit significantly in certain categories.
 
 The Office Supplies category generates high sales but lower profits compared to Technology.
