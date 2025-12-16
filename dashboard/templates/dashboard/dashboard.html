@@ -1,0 +1,78 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-4 text-center mb-4">
+            <i class="fas fa-chart-bar text-primary"></i> Sales Analytics Dashboard
+        </h1>
+    </div>
+</div>
+
+<!-- Key Metrics -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card metric-card">
+            <div class="card-body text-center">
+                <i class="fas fa-dollar-sign fa-2x mb-2"></i>
+                <h3>{{ total_sales }}</h3>
+                <p class="mb-0">Total Sales</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card metric-card">
+            <div class="card-body text-center">
+                <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                <h3>{{ total_orders }}</h3>
+                <p class="mb-0">Total Orders</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card metric-card">
+            <div class="card-body text-center">
+                <i class="fas fa-receipt fa-2x mb-2"></i>
+                <h3>{{ avg_order_value }}</h3>
+                <p class="mb-0">Avg Order Value</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card metric-card">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-2x mb-2"></i>
+                <h3>{{ unique_customers }}</h3>
+                <p class="mb-0">Customers</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card chart-container">
+            {{ chart1|safe }}
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card chart-container">
+            {{ chart2|safe }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card chart-container">
+            {{ chart3|safe }}
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card chart-container">
+            {{ chart4|safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

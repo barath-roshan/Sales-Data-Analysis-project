@@ -1,0 +1,114 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-4 text-center mb-4">
+            <i class="fas fa-lightbulb text-warning"></i> Business Insights
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5><i class="fas fa-tags me-2"></i>Category Analysis</h5>
+            </div>
+            <div class="card-body">
+                {{ category_analysis|safe }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5><i class="fas fa-map-marker-alt me-2"></i>Regional Analysis</h5>
+            </div>
+            <div class="card-body">
+                {{ region_analysis|safe }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5><i class="fas fa-users me-2"></i>Segment Analysis</h5>
+            </div>
+            <div class="card-body">
+                {{ segment_analysis|safe }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <h5><i class="fas fa-crown me-2"></i>Top 5 Customers</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for customer, sales in top_customers.items %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ customer }}</span>
+                        <strong>${{ sales|floatformat:2 }}</strong>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h5><i class="fas fa-map me-2"></i>Top 5 States</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for state, sales in top_states.items %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ state }}</span>
+                        <strong>${{ sales|floatformat:2 }}</strong>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5><i class="fas fa-rocket me-2"></i>Key Recommendations</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-primary">Growth Opportunities</h6>
+                        <ul>
+                            <li>Focus on South region expansion</li>
+                            <li>Boost Office Supplies margins</li>
+                            <li>Capitalize on Q4 seasonality</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-success">Strategic Actions</h6>
+                        <ul>
+                            <li>Target Corporate segment</li>
+                            <li>Promote premium shipping</li>
+                            <li>Develop customer loyalty programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
