@@ -87,4 +87,4 @@ This dashboard transforms raw sales data into actionable business intelligence, 
 
 ---
 
-*Built with ❤️ using Django and modern web technologies*
+*Built with ❤️ using Django and modern web technologies by Barath Roshan*
