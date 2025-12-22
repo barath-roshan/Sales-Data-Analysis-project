@@ -1,3 +1,8 @@
-Django==5.2.5
-pandas==2.2.3
-plotly==5.15.0
+Django
+gunicorn
+whitenoise
+pandas
+numpy
+matplotlib
+seaborn
+plotly
